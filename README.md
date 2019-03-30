@@ -3,6 +3,6 @@ Tensorflow serving model for Balance scale dataset.
 ```bash
 docker pull tensorflow/serving
 docker run -p 8501:8501 \
-  --mount type=bind,source=$PWD/build,target=/models/model \
+  --mount type=bind,source=$PWD,target=/models/model \
   -e MODEL_NAME=model -t tensorflow/serving
 ```
